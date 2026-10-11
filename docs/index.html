@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SORTY — Organiza tus archivos en segundos. Aplicación de escritorio para Windows, gratis y 100 % local.">
+<title>SORTY — Pon orden al caos</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#inicio">
+    <img src="assets/logo.png" alt="Logo de SORTY" width="44" height="44">
+    <span>SORTY</span>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="#caracteristicas" data-i18n="nav_feat">Características</a>
+    <a href="#privacidad" data-i18n="nav_priv">Privacidad</a>
+    <a href="#instalar" data-i18n="nav_inst">Instalación</a>
+    <a href="#codigo" data-i18n="nav_code">Código</a>
+  </nav>
+  <div class="top-actions">
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" class="on">ES</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+    <a class="btn btn-small btn-yellow" href="#descargar" data-i18n="nav_dl">Descargar</a>
+    <button class="burger" id="burger" aria-label="Menú" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="badge badge-coral" data-i18n="hero_badge">AUTOMATIZACIÓN DE ARCHIVOS</span>
+      <h1 data-i18n="hero_title">PON ORDEN AL CAOS.</h1>
+      <p class="sub" data-i18n="hero_sub">Organiza tus archivos en segundos. Sin complicaciones.</p>
+      <div id="descargar" class="dl-box">
+        <a id="btn-descargar" class="btn btn-big btn-yellow" href="#" data-i18n="hero_dl">DESCARGAR SORTY PARA WINDOWS</a>
+        <p class="dl-meta"><span data-i18n="hero_ver">Versión</span> <strong id="dl-version">1.0.0</strong> · <span id="dl-size">11.9 MB</span> · Windows 10/11 · 64 bits</p>
+        <p class="dl-wait" id="dl-wait" hidden data-i18n="hero_wait">La descarga aún no está publicada. Vuelve pronto o mira el código fuente.</p>
+        <p><a id="link-releases" href="#" data-i18n="hero_all">Ver todas las versiones</a></p>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="assets/sortyprom.jpg" alt="Imagen promocional de SORTY" width="600" height="600" loading="eager">
+    </div>
+  </section>
+
+  <!-- PRESENTACIÓN VISUAL -->
+  <section class="section" id="visual">
+    <h2 data-i18n="vis_title">Míralo en acción</h2>
+    <div class="shots">
+      <figure class="card">
+        <img src="assets/captura-1.png" alt="Ventana principal de SORTY con una carpeta seleccionada" width="960" height="495" loading="lazy">
+        <figcaption data-i18n="vis_cap1">Ventana principal: selecciona tu carpeta y ve las estadísticas.</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="assets/captura-2.png" alt="Pantalla Organizar de SORTY con vista previa de 43 archivos" width="960" height="493" loading="lazy">
+        <figcaption data-i18n="vis_cap2">Pantalla Organizar: categorías, simulación y vista previa real.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CARACTERÍSTICAS -->
+  <section class="section" id="caracteristicas">
+    <h2 data-i18n="feat_title">Lo que hace SORTY</h2>
+    <div class="grid">
+      <article class="card card-yellow"><h3 data-i18n="f1t">Elige tu carpeta</h3><p data-i18n="f1d">Selecciona cualquier carpeta (o arrástrala a la ventana) y SORTY la analiza al instante.</p></article>
+      <article class="card card-purple"><h3 data-i18n="f2t">Clasifica solo</h3><p data-i18n="f2d">Imágenes, documentos, videos, audio, comprimidos, ejecutables y otros. Sin tocar subcarpetas, salvo que actives el modo recursivo.</p></article>
+      <article class="card card-mint"><h3 data-i18n="f3t">Previsualiza antes</h3><p data-i18n="f3d">La simulación muestra cada movimiento sin tocar el disco. Confirmas solo si te convence.</p></article>
+      <article class="card card-coral"><h3 data-i18n="f4t">Sin sobrescrituras</h3><p data-i18n="f4d">Si un nombre ya existe, se crea “archivo (1).ext”. Nada se borra ni se reemplaza jamás.</p></article>
+      <article class="card card-white"><h3 data-i18n="f5t">Deshazlo si quieres</h3><p data-i18n="f5d">Cada operación queda registrada y puedes devolver los archivos a su lugar desde el Historial.</p></article>
+      <article class="card card-white"><h3 data-i18n="f6t">En tu idioma</h3><p data-i18n="f6d">Español, English y Português, con cambio al instante desde Ajustes.</p></article>
+    </div>
+  </section>
+
+  <!-- PRIVACIDAD -->
+  <section class="section" id="privacidad">
+    <h2 data-i18n="priv_title">Tus archivos no salen de tu equipo</h2>
+    <div class="card card-mint wide">
+      <p data-i18n="priv_d">SORTY trabaja 100 % en local: no tiene cuentas, no usa red y no envía nada a ningún servidor (verificado: el programa no contiene código de red). Tus ajustes e historial se guardan solo en tu equipo, en la carpeta de datos del usuario. Nunca se elimina ni se sube ningún archivo.</p>
+    </div>
+  </section>
+
+  <!-- REQUISITOS -->
+  <section class="section" id="instalar">
+    <h2 data-i18n="inst_title">Requisitos e instalación</h2>
+    <div class="card card-yellow wide">
+      <ol>
+        <li data-i18n="inst_1">Pulsa DESCARGAR SORTY PARA WINDOWS y guarda el archivo <code>Sorty.exe</code> (≈ 11.9 MB).</li>
+        <li data-i18n="inst_2">Haz doble clic para abrirlo. No requiere instalación ni tener Python.</li>
+        <li data-i18n="inst_3">Si Windows SmartScreen muestra una advertencia (normal en apps independientes): pulsa “Más información” → “Ejecutar de todas formas”.</li>
+      </ol>
+      <p><strong data-i18n="inst_req">Requisitos:</strong> <span data-i18n="inst_reqd">Windows 10 u 11 de 64 bits. No necesita permisos de administrador.</span></p>
+    </div>
+  </section>
+
+  <!-- USO GRATUITO -->
+  <section class="section" id="codigo">
+    <h2 data-i18n="code_title">Gratis para usar</h2>
+    <div class="card card-purple wide">
+      <p data-i18n="code_d">SORTY es gratuito para uso personal. El programa se distribuye como ejecutable; el código fuente no es público. Todos los derechos reservados © Nxttomorrow.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p><strong>SORTY</strong> <span id="foot-version">1.0.0</span> · Freeware · <span data-i18n="foot_by">Creador</span>: Nxttomorrow · <span id="foot-year">2026</span></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
