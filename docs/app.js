@@ -93,6 +93,7 @@ function aplicarIdioma() {
 
 function configurarDescarga() {
   const btn = document.getElementById("btn-descargar");
+  const nav = document.getElementById("nav-descargar");
   const wait = document.getElementById("dl-wait");
   const all = document.getElementById("link-releases");
   document.getElementById("dl-version").textContent = CONFIG.VERSION;
@@ -103,6 +104,8 @@ function configurarDescarga() {
     // Enlace estable a la última versión publicada (mismo nombre de archivo).
     btn.href = `${base}/latest/download/${CONFIG.EXE_NAME}`;
     btn.removeAttribute("aria-disabled");
+    // El botón superior descarga directamente el mismo archivo.
+    nav.href = btn.href;
     wait.hidden = true;
     all.href = `${base}`;
     // La descarga la inicia el navegador; ningún mensaje previo de éxito.
@@ -110,6 +113,7 @@ function configurarDescarga() {
     // Sin configurar: estado informativo en lugar de un botón roto.
     btn.removeAttribute("href");
     btn.setAttribute("aria-disabled", "true");
+    nav.href = "#descargar";
     wait.hidden = false;
     all.removeAttribute("href");
   }
