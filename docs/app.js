@@ -9,13 +9,13 @@ const CONFIG = {
   OWNER: "mnis-nxttomorrow",    // usuario real de GitHub
   REPO: "Sorty",
   EXE_NAME: "Sorty.exe",        // nombre exacto del archivo en el Release
-  VERSION: "1.0.0",             // versión real publicada
-  SIZE_MB: "11.9 MB"            // tamaño real del .exe
+  VERSION: "1.1.0",             // versión real publicada
+  SIZE_MB: "12.0 MB"            // tamaño real del .exe
 };
 
 const STR = {
   es: {
-    nav_feat: "Características", nav_priv: "Privacidad", nav_inst: "Instalación",
+    nav_feat: "Características", nav_vers: "Versiones", nav_priv: "Privacidad", nav_inst: "Instalación",
     nav_code: "Gratis", nav_dl: "Descargar",
     hero_badge: "AUTOMATIZACIÓN DE ARCHIVOS", hero_title: "PON ORDEN AL CAOS.",
     hero_sub: "Organiza tus archivos en segundos. Sin complicaciones.",
@@ -35,16 +35,27 @@ const STR = {
     priv_title: "Tus archivos no salen de tu equipo",
     priv_d: "SORTY trabaja 100 % en local: no tiene cuentas, no usa red y no envía nada a ningún servidor (verificado: el programa no contiene código de red). Tus ajustes e historial se guardan solo en tu equipo, en la carpeta de datos del usuario. Nunca se elimina ni se sube ningún archivo.",
     inst_title: "Requisitos e instalación",
-    inst_1: "Pulsa DESCARGAR SORTY PARA WINDOWS y guarda el archivo Sorty.exe (≈ 11.9 MB).",
+    inst_1: "Pulsa DESCARGAR SORTY PARA WINDOWS y guarda el archivo Sorty.exe (≈ 12.0 MB).",
     inst_2: "Haz doble clic para abrirlo. No requiere instalación ni tener Python.",
     inst_3: "Si Windows SmartScreen muestra una advertencia (normal en apps independientes): pulsa “Más información” → “Ejecutar de todas formas”.",
+    vers_title: "Versiones",
+    v110_badge: "ACTUAL",
+    v110_title: "Versión 1.1.0 — Cambios Visuales",
+    v110_f1: "Temas de colores + crea el tuyo",
+    v110_f2: "Selector por categoría y carpetas renombrables",
+    v110_f3: "Bienvenida animada y cofre renovado",
+    v110_dl: "Descargar 1.1.0",
+    v100_title: "Versión 1.0.0 — Primera versión",
+    v100_d: "Organización automática con simulación, confirmación, deshacer e historial.",
+    v100_dl: "Descargar 1.0.0",
+    v100_page: "Ver release",
     inst_req: "Requisitos:", inst_reqd: "Windows 10 u 11 de 64 bits. No necesita permisos de administrador.",
     code_title: "Gratis para usar",
     code_d: "SORTY es gratuito para uso personal. El programa se distribuye como ejecutable; el código fuente no es público. Todos los derechos reservados © Nxttomorrow.",
     foot_by: "Creador"
   },
   en: {
-    nav_feat: "Features", nav_priv: "Privacy", nav_inst: "Install",
+    nav_feat: "Features", nav_vers: "Releases", nav_priv: "Privacy", nav_inst: "Install",
     nav_code: "Free", nav_dl: "Download",
     hero_badge: "FILE AUTOMATION", hero_title: "TAME THE CHAOS.",
     hero_sub: "Organize your files in seconds. No hassle.",
@@ -64,9 +75,20 @@ const STR = {
     priv_title: "Your files never leave your computer",
     priv_d: "SORTY works 100 % locally: no accounts, no network, nothing sent anywhere (verified: the program contains no networking code). Settings and history live only on your machine, in the user data folder. No file is ever deleted or uploaded.",
     inst_title: "Requirements & install",
-    inst_1: "Press DOWNLOAD SORTY FOR WINDOWS and save Sorty.exe (≈ 11.9 MB).",
+    inst_1: "Press DOWNLOAD SORTY FOR WINDOWS and save Sorty.exe (≈ 12.0 MB).",
     inst_2: "Double-click to open. No install, no Python needed.",
     inst_3: "If Windows SmartScreen warns you (normal for indie apps): click “More info” → “Run anyway”.",
+    vers_title: "Releases",
+    v110_badge: "LATEST",
+    v110_title: "Version 1.1.0 — Visual Changes",
+    v110_f1: "Color themes + make your own",
+    v110_f2: "Per-category picker and renamable folders",
+    v110_f3: "Animated welcome and renewed chest",
+    v110_dl: "Download 1.1.0",
+    v100_title: "Version 1.0.0 — First release",
+    v100_d: "Automatic organizing with simulation, confirmation, undo and history.",
+    v100_dl: "Download 1.0.0",
+    v100_page: "View release",
     inst_req: "Requirements:", inst_reqd: "64-bit Windows 10 or 11. No admin rights needed.",
     code_title: "Free to use",
     code_d: "SORTY is free for personal use. It is distributed as an executable; the source code is not public. All rights reserved © Nxttomorrow.",
@@ -96,6 +118,9 @@ function configurarDescarga() {
   const nav = document.getElementById("nav-descargar");
   const wait = document.getElementById("dl-wait");
   const all = document.getElementById("link-releases");
+  const btn110 = document.getElementById("btn-descargar-110");
+  const btn100 = document.getElementById("btn-descargar-100");
+  const page100 = document.getElementById("link-release-100");
   document.getElementById("dl-version").textContent = CONFIG.VERSION;
   document.getElementById("dl-size").textContent = CONFIG.SIZE_MB;
   document.getElementById("foot-version").textContent = CONFIG.VERSION;
@@ -108,12 +133,20 @@ function configurarDescarga() {
     nav.href = btn.href;
     wait.hidden = true;
     all.href = `${base}`;
+    // Tarjeta 1.1.0: misma última versión; tarjeta 1.0.0: enlaces fijos al tag.
+    btn110.href = btn.href;
+    btn100.href = `${base}/download/v1.0.0/${CONFIG.EXE_NAME}`;
+    page100.href = `${base}/tag/v1.0.0`;
     // La descarga la inicia el navegador; ningún mensaje previo de éxito.
   } else {
     // Sin configurar: estado informativo en lugar de un botón roto.
     btn.removeAttribute("href");
     btn.setAttribute("aria-disabled", "true");
     nav.href = "#descargar";
+    btn110.removeAttribute("href");
+    btn110.setAttribute("aria-disabled", "true");
+    btn100.removeAttribute("href");
+    page100.removeAttribute("href");
     wait.hidden = false;
     all.removeAttribute("href");
   }

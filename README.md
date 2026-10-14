@@ -7,7 +7,7 @@ Windows, gratis y 100 % local.
 
 **[Descargar SORTY para Windows](https://github.com/mnis-nxttomorrow/Sorty/releases/latest/download/Sorty.exe)**
 
-Versión 1.0.0 · ≈ 11.9 MB · Windows 10/11 de 64 bits · Sin instalación.
+Versión 1.1.0 · ≈ 12.0 MB · Windows 10/11 de 64 bits · Sin instalación.
 
 > Si Windows SmartScreen muestra una advertencia (normal en apps
 > independientes): pulsa “Más información” → “Ejecutar de todas formas”.
