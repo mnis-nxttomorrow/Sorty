@@ -54,6 +54,9 @@ a { color: var(--ink); }
 .badge { display: inline-block; font-weight: 800; font-size: .8rem; border: 3px solid var(--ink);
   padding: 4px 12px; margin-bottom: 14px; }
 .badge-coral { background: var(--coral); }
+a.badge { text-decoration: none; color: var(--ink); }
+.badge-news { background: var(--yellow); box-shadow: 4px 4px 0 var(--ink); }
+a.badge-news:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
 .sub { color: var(--muted); font-size: 1.2rem; }
 .hero-img img { width: 100%; height: auto; border: 3px solid var(--ink);
   box-shadow: 8px 8px 0 var(--ink); background: var(--white); }
