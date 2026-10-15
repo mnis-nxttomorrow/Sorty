@@ -15,7 +15,7 @@ const CONFIG = {
 
 const STR = {
   es: {
-    nav_feat: "Características", nav_vers: "Versiones", nav_priv: "Privacidad", nav_inst: "Instalación",
+    nav_feat: "Características", nav_vers: "Versiones", nav_nov: "Novedades", nav_priv: "Privacidad", nav_inst: "Instalación",
     nav_code: "Gratis", nav_dl: "Descargar",
     hero_badge: "AUTOMATIZACIÓN DE ARCHIVOS", hero_title: "PON ORDEN AL CAOS.",
     hero_sub: "Organiza tus archivos en segundos. Sin complicaciones.",
@@ -51,13 +51,18 @@ const STR = {
     v100_d: "Organización automática con simulación, confirmación, deshacer e historial.",
     v100_dl: "Descargar 1.0.0",
     v100_page: "Ver release",
+    nov_title: "Cambios en la actualización",
+    nov_sub: "Lo nuevo de la 1.1.0, capturado directamente del programa.",
+    nov_cap1: "Personalización: elige un tema o crea el tuyo, se aplica al instante.",
+    nov_cap2: "Mis colores y Mis carpetas: paleta propia y destinos renombrables.",
+    nov_cap3: "Organizar refleja tus nombres: aquí Videos se llama MP3.",
     inst_req: "Requisitos:", inst_reqd: "Windows 10 u 11 de 64 bits. No necesita permisos de administrador.",
     code_title: "Gratis para usar",
     code_d: "SORTY es gratuito para uso personal. El programa se distribuye como ejecutable; el código fuente no es público. Todos los derechos reservados © Nxttomorrow.",
     foot_by: "Creador"
   },
   en: {
-    nav_feat: "Features", nav_vers: "Releases", nav_priv: "Privacy", nav_inst: "Install",
+    nav_feat: "Features", nav_vers: "Releases", nav_nov: "What's new", nav_priv: "Privacy", nav_inst: "Install",
     nav_code: "Free", nav_dl: "Download",
     hero_badge: "FILE AUTOMATION", hero_title: "TAME THE CHAOS.",
     hero_sub: "Organize your files in seconds. No hassle.",
@@ -93,6 +98,11 @@ const STR = {
     v100_d: "Automatic organizing with simulation, confirmation, undo and history.",
     v100_dl: "Download 1.0.0",
     v100_page: "View release",
+    nov_title: "Changes in this update",
+    nov_sub: "What's new in 1.1.0, captured straight from the app.",
+    nov_cap1: "Themes: pick one or make your own, applied instantly.",
+    nov_cap2: "My colors and My folders: your palette and renamable destinations.",
+    nov_cap3: "Organize mirrors your names: here Videos is called MP3.",
     inst_req: "Requirements:", inst_reqd: "64-bit Windows 10 or 11. No admin rights needed.",
     code_title: "Free to use",
     code_d: "SORTY is free for personal use. It is distributed as an executable; the source code is not public. All rights reserved © Nxttomorrow.",

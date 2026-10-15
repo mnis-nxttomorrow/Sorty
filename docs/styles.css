@@ -77,6 +77,10 @@ a.badge-news:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(-
 .shots img { width: 100%; height: auto; display: block; border-bottom: 3px solid var(--ink); }
 .shots figure { margin: 0; background: var(--white); }
 .shots figcaption { padding: 10px 14px; font-size: .9rem; color: var(--muted); }
+.shots3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+.shots3 img { width: 100%; height: auto; display: block; border-bottom: 3px solid var(--ink); }
+.shots3 figure { margin: 0; background: var(--white); }
+.shots3 figcaption { padding: 10px 14px; font-size: .9rem; color: var(--muted); }
 code { background: var(--white); border: 2px solid var(--ink); padding: 0 6px; }
 
 footer { border-top: 3px solid var(--ink); background: var(--ink); color: var(--cream);
@@ -85,7 +89,7 @@ footer { border-top: 3px solid var(--ink); background: var(--ink); color: var(--
 /* Móvil */
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; padding: 32px 20px; }
-  .grid, .shots { grid-template-columns: 1fr; }
+  .grid, .shots, .shots3 { grid-template-columns: 1fr; }
   .section { padding: 20px; }
   .nav { display: none; position: absolute; top: 100%; left: 0; right: 0;
     background: var(--yellow); border-bottom: 3px solid var(--ink);
